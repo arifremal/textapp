@@ -11,10 +11,20 @@ function TextForm(props) {
     let newText = text.toLowerCase();
     setText (newText);
   };
+  const h = () => {
+    
+    let newText = text.toLocaleLowerCase();
+    setText (newText);
+  };
+  const handleclear =()=>{
+    let newText = ' ';
+    setText (newText)
+  }
   const handleonChange = (event) => {
   
     setText(event.target.value);
   };
+
   const [text, setText] = useState("Enter your Text");
   return (
    <>
@@ -35,6 +45,12 @@ function TextForm(props) {
       </button>
       <button className="btn btn-danger mx-2" onClick={handleClicklower}>
         Connvert to Lowercase{" "}
+      </button>
+      <button className="btn btn-danger mx-2" onClick={handleclear}>
+        Clear text {" "}
+      </button>
+      <button className="btn btn-danger mx-2" onClick={h}>
+        Clear text {" "}
       </button>
     </div>
     <div className="container my-3">
