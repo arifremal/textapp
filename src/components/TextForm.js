@@ -11,10 +11,11 @@ function TextForm(props) {
     let newText = text.toLowerCase();
     setText (newText);
   };
-  const h = () => {
+  const handleCopy = () => {
     
-    let newText = text.toLocaleLowerCase();
-    setText (newText);
+    var text = document.getElementById("myBox")
+    text.select()
+    navigator.clipboard.writeText(text.value)
   };
   const handleclear =()=>{
     let newText = ' ';
@@ -49,8 +50,8 @@ function TextForm(props) {
       <button className="btn btn-danger mx-2" onClick={handleclear}>
         Clear text {" "}
       </button>
-      <button className="btn btn-danger mx-2" onClick={h}>
-        Clear text {" "}
+      <button className="btn btn-danger mx-2" onClick={handleCopy}>
+        Copy text {" "}
       </button>
     </div>
     <div className="container my-3">

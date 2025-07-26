@@ -19,7 +19,7 @@ function About() {
     // }
 
     const toggleStyle =()=>{
-        if(myStyle.color == 'white'){
+        if(myStyle.color === 'white'){
             setMyStyle({
                        color: 'black',
         backgroundColor: 'white',
